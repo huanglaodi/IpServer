@@ -1,0 +1,221 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="../js-util/jquery.js"></script>
+<script src="../js-util/jquery-form.js"></script>
+<script type="text/javascript" src="../My97DatePicker/calendar.js"></script>
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+<link href="../css/realtime.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+			<div class="right1">
+				<div class="right1-top">
+					<h3>实时查看</h3>
+				</div>
+				<ul class="right1-fl">
+					<li><a class="usercome">实时登记</a><a class="inout">实时出入</a></li>
+				</ul>
+			</div>
+			<div class="right2">
+				<dl class="right2-ucome">
+
+                             <table>
+								<tr>
+									<td><lable>头像</lable></td>
+									<td>ID</td>
+									<td>姓名</td>
+									<td>权限</td>
+									<td>卡号</td>
+									<td>密码</td>
+									<td>指纹数</td>
+									<td>掌纹数</td>
+									<td>时间段编号</td>
+									<td>有效期</td>
+								</tr>
+								<tr>
+									<td><img src="../images/yao.jpg"></td>
+									<td>1</td>
+									<td>小刘</td>
+									<td>用户</td>
+									<td>123564</td>
+									<td>8965</td>
+									<td>3</td>
+									<td>1</td>
+									<td>2</td>
+									<td>2019-01-01至2020-01-01</td>
+								</tr>
+								<tr>
+									<td><img src="../images/yao.jpg"></td>
+									<td>1</td>
+									<td>小刘</td>
+									<td>用户</td>
+									<td>123564</td>
+									<td>8965</td>
+									<td>3</td>
+									<td>1</td>
+									<td>2</td>
+									<td>2019-01-01至2020-01-01</td>
+								</tr>
+								<tr>
+									<td><img src="../images/yao.jpg"></td>
+									<td>1</td>
+									<td>小刘</td>
+									<td>用户</td>
+									<td>123564</td>
+									<td>8965</td>
+									<td>3</td>
+									<td>1</td>
+									<td>2</td>
+									<td>2019-01-01至2020-01-01</td>
+								</tr>
+								<tr>
+									<td><img src="../images/yao.jpg"></td>
+									<td>1</td>
+									<td>小明</td>
+									<td>管理员</td>
+									<td>123564</td>
+									<td>8965</td>
+									<td>3</td>
+									<td>1</td>
+									<td>2</td>
+									<td>2019-01-01至2020-01-01</td>
+								</tr>
+								<tr>
+									<td><img src="../images/yao.jpg"></td>
+									<td>1</td>
+									<td>小红</td>
+									<td>用户</td>
+									<td>123564</td>
+									<td>8965</td>
+									<td>3</td>
+									<td>1</td>
+									<td>2</td>
+									<td>2019-01-01至2020-01-01</td>
+								</tr>
+							</table>
+
+						<div class="right4-bottom">
+							<input id="firstye" style="display:none" type="button" value="首页"/>
+							<input id="beforeye" style="display:none" type="button" value="上一页"/>
+							<!-- 若只有一页则不显示下页，尾页，翻页 -->
+							<input id="nextye" type="button" value="下一页" >
+							<input id="lastye" type="button" value="尾页" >
+							<select id="fanye" >
+								<option value=${num }>第1页</option>
+								<option value=${num }>第2页</option>
+								<option value=${num }>第3页</option>
+							</select>
+							<label id="ye2" >共5页</label>
+						</div>
+				</dl>
+				<dl class="right2-inout" style="display:none">
+					<table>
+						<tr>
+							<td><lable>头像</lable></td>
+							<td>ID</td>
+							<td>姓名</td>
+							<td>时间</td>
+							<td>识别方式</td>
+						</tr>
+						<tr>
+							<td><img src="../images/yao.jpg"></td>
+							<td>1</td>
+							<td>小刘</td>
+							<td>2019-02-05</td>
+							<td>指纹</td>
+						</tr>
+						<tr>
+							<td><img src="../images/yao.jpg"></td>
+							<td>1</td>
+							<td>小刘</td>
+							<td>2019-02-05</td>
+							<td>指纹</td>
+						</tr>
+						<tr>
+							<td><img src="../images/yao.jpg"></td>
+							<td>1</td>
+							<td>小刘</td>
+							<td>2019-02-05</td>
+							<td>指纹</td>
+						</tr>
+						<tr>
+							<td><img src="../images/yao.jpg"></td>
+							<td>1</td>
+							<td>小刘</td>
+							<td>2019-02-05</td>
+							<td>指纹</td>
+						</tr>
+						<tr>
+							<td><img src="../images/yao.jpg"></td>
+							<td>1</td>
+							<td>小刘</td>
+							<td>2019-02-05</td>
+							<td>指纹</td>
+						</tr>
+					</table>
+					</form>
+
+
+					<div class="right5-bottom">
+						<input id="firstye1" style="display:none" type="button" value="首页"/>
+						<input id="beforeye1" style="display:none" type="button" value="上一页"/>
+						<!-- 若只有一页则不显示下页，尾页，翻页 -->
+						<input id="nextye1" type="button" value="下一页" >
+						<input id="lastye1" type="button" value="尾页" >
+						<select id="fanye1" >
+							<option value=${num }>第1页</option>
+							<option value=${num }>第2页</option>
+							<option value=${num }>第3页</option>
+						</select>
+						<label id="ye" >共5页</label>
+					</div>
+
+				</dl>
+
+			</div>
+
+</body>
+<script type="text/javascript">
+
+	$(".right1-fl").find("a").click(function(){
+		$(this).css({"background":"#ff8a3c"});
+		$(this).siblings().css({"background":"#fff"});
+		 var text = $(this).text();
+		 if(text=="实时登记"){
+			 $(".right2-ucome").show();
+			 $(".right2-ucome").siblings().hide();
+		 }else{
+			 $(".right2-inout").show();
+			 $(".right2-inout").siblings().hide();
+		 }
+
+	})
+	
+
+
+
+	
+ var username="";
+  
+ // setInterval("getsession()",1000);
+  
+  function getsession(){
+	  $.ajax({
+		    url:path+"/device/getsession",
+			data:{},
+			type : "post",
+			dataType : "text",
+			headers: {"ajaxrequest":"true"},
+			async : false,
+			success : function(e){
+				 if(e=="sessionout" || e=="nosession"){
+					window.location.href=path+"/device/login";
+				} 
+			}
+	  })
+	  
+  }
+</script>
+</html>

@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;text-decoration: none;font-family: "微软雅黑";list-style:none;}
+
+/*right*/
+
+
+/*right1*/
+.right1{
+	box-shadow: 1px 2px 0px #999 inset;
+	width:1700px;
+}
+.right1-top{
+	height:40px;
+	width:1700px;
+	overflow:hidden
+}
+.right1-top h3{
+	margin-top:11px;
+	margin-left:3px;
+	font-size:18px;
+	color:#333;
+
+}
+
+.right1-fl{
+	height:30px;
+	line-height:30px;
+	border:1px solid #ccc;
+	padding-left:20px;
+	padding-top:10px;
+}
+.right1-fl li{
+	padding:0 10px;
+	float:left;
+	height:30px;
+	text-align:center;
+	font-size:14px;
+	/* color:#333; */
+	border:1px solid #ccc;
+	border-radius:5px;
+	margin-right:20px;
+	cursor:pointer;
+	border-top:0;
+	border-bottom:0;
+	padding-right:30px;
+}
+
+
+.right1-fl li a{
+	padding:0 10px;
+
+}
+
+.right2{
+	box-shadow: 1px 2px 0px #999 inset;
+	width:1700px;
+	height:773px;
+}
+
+/*.right2 .right2-doorpro{
+	position:relative;
+	top:10px;
+	left:200px;
+	width:450px;
+}
+
+.right2 .right2-doorpro form li lable{
+	display: inline-block;
+	text-align: left;
+	width:200px;
+}
+
+
+.right2-doorpro form li input{
+	margin-left:20px;
+	background-color: #DFF4FE;
+	border: 0;
+	outline: none;
+	height: 25px;
+	width:152px;
+	text-align: center;
+
+}
+
+.right2 .right2-doorpro form li select{
+	margin-left:20px;
+	background-color: #DFF4FE;
+	border: 0;
+	outline: none;
+	height: 30px;
+	width:50px;
+	text-align: right;
+}
+
+
+
+.right2 .right2-doorpro form li select option{
+	text-align: center;
+}
+
+.right2-doorpro form li{
+
+	margin-bottom: 10px;
+}*/
+
+.baocun{
+
+	text-align: center;
+}
+
+.right2 dl{
+	position:relative;
+	top:10px;
+	left:350px;
+	width:400px;
+}
+
+.right2 dl form li lable{
+	display: inline-block;
+	text-align: left;
+	width:100px;
+}
+
+
+dl form li input{
+	margin-left:20px;
+	background-color: #DFF4FE;
+	border: 0;
+	outline: none;
+	height: 25px;
+	width:100px;
+	text-align: center;
+
+}
+
+.tips{
+	float: right;
+	font-size: 10px;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.right2 dl form li select{
+	margin-left:20px;
+	background-color: #DFF4FE;
+	border: 0;
+	outline: none;
+	height: 30px;
+	width:100px;
+	text-align: center;
+	text-align-last: center;
+}
+
+
+
+.right2 dl form li select option{
+	text-align: center;
+}
+
+dl form li{
+
+	margin-bottom: 10px;
+}
+
+.romup {
+
+	position: relative;
+	left:150px;
+	top:30px;
+}
+.baocun {
+
+	position: relative;
+	top:30px;
+}
+.doorstain {
+
+	position: relative;
+	left:40px;
+	top:30px;
+}
+
+.right1-fl li a:nth-child(1){
+	background:#ff8a3c;
+
+}
+
+.doorsave{
+	text-align:center;
+}
+

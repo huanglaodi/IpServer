@@ -1,0 +1,301 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="../js-util/jquery.js"></script>
+<script src="../js-util/jquery-form.js"></script>
+<script type="text/javascript" src="../My97DatePicker/calendar.js"></script>
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+<link href="../css/systemmanager.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+			<div class="right1">
+				<div class="right1-top">
+					<h3>设备管理</h3>
+				</div>
+				<ul class="right1-fl">
+					<li>
+						<a class="time">时间</a>
+						<a class="shibie">识别设置</a>
+						<a class="sound">声音及显示</a>
+						<a class="webpro">网络参数</a>
+						<a class="datamag">数据管理</a>
+						<a class="devinf">设备信息</a>
+						<a class="devres">设备维护</a>
+						<a class="devpro">设备参数</a>
+					</li>
+				</ul>
+			</div>
+			<div class="right2">
+				<dl class="right2-time">
+					<form>
+						<li><lable>设备时间</lable>
+							<input class="devtime" disabled="true" value="2020-01-01 08:30:01"></li>
+						<li><lable>更新时间</lable> <input class="uptime"
+							onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',readOnly:true})"
+							value="2020-01-01 08:30:01"></li>
+						<li class="baocuntime"><input type="button" value="保存"></li>
+					</form>
+				</dl>
+				<dl class="right2-shibie" style="display: none">
+					<form>
+						<li>
+							<lable>开门方式</lable>
+							<select class="vermode">
+								<option value="2">FC/FP/P/C</option>
+								<option value="3">P+FC/FP</option>
+								<option value="4">C+FC/FP</option>
+								<option value="6">FP+FC</option>
+								<option value="1">个人模式</option>
+							</select>
+						</li>
+						<li>
+							<lable>重复确认时间</lable>
+							<input class="revtime">
+							<p class="tips" >(以分钟为单位,请输入0~60)</p>
+						</li>
+						<li class="shibiebut"><input type="button" style="width:50px" value="保存"></li>
+					</form>
+				</dl>
+				<dl class="right2-sound" style="display: none">
+					<form>
+						<li>
+							<lable>音量</lable>
+							<select class="devvol">
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+							</select>
+						</li>
+						<li>
+							<lable>屏保时间</lable>
+							<input class="devscran">
+							<p class="tips" >(以分钟为单位,请输入0~60)</p>
+						</li>
+						<li>
+							<lable>睡眠时间</lable>
+							<input class="devsleep">
+							<p class="tips" >(以分钟为单位,请输入0~60)</p>
+						</li>
+						<li>
+							<lable>补光灯调节</lable>
+							<select class="devlight">
+								<option value="1">常闭</option>
+								<option value="2">常开</option>
+								<option value="3">自动</option>
+								<option value="4">时间段</option>
+							</select>
+						</li>
+						<li class="soundbut"><input type="button" style="width:50px" value="保存"></li>
+					</form>
+				</dl>
+				<dl class="right2-webpro" style="display: none">
+					<form>
+						<li>
+							<lable>机器名称</lable>
+							<input class="dname">
+						</li>
+						<li>
+							<lable>服务器IP地址</lable>
+							<input class="serverip">
+						</li>
+						<li>
+							<lable>服务器端口</lable>
+							<input class="serverport">
+						</li>
+						<li>
+							<lable>首选DNS</lable>
+							<input class="dns" value="255.255.255.255">
+						</li>
+						<li>
+							<lable>推送地址</lable>
+							<input class="tsip">
+						</li>
+						<li>
+							<lable>推送端口</lable>
+							<input class="tsport">
+						</li>
+						<li>
+							<lable>是否推送</lable>
+							<select class="ispush">
+								<option value="yes">开启</option>
+								<option value="no">关闭</option>
+							</select>
+						</li>
+						<li class="webprobut"><input class="wb" style="width: 50px" type="button" value="保存"></li>
+					</form>
+				</dl>
+				<dl class="right2-datamag" style="display: none">
+					<li>
+						<img src="../images/jinggao.jpg"><input class="dlallmanager" type="button" value="删除全部管理员权限">
+					</li>
+					<li>
+						<img src="../images/jinggao.jpg"><input class="dlalluser" type="button" value="删除全部用户">
+					</li>
+					<li>
+						<img src="../images/jinggao.jpg"><input class="dlalllog" type="button" value="删除全部记录">
+					</li>
+					<li>
+						<img src="../images/jinggao.jpg"><input class="dlall" type="button" value="恢复出厂设置">
+					</li>
+
+				</dl>
+				<dl class="right2-devinfo" style="display: none">
+					<form>
+						<table>
+							<tr>
+								<td><lable>设备名称</lable></td>
+								<td><input class="dvname" disabled="disabled" ></td>
+								<td><lable>设备序列号</lable></td>
+								<td><input disabled="disabled" class="dvId" ></td>
+							</tr>
+							<tr>
+								<td><lable>指纹版本</lable></td>
+								<td><input class="fpver" disabled="disabled"></td>
+								<td><lable>人脸版本</lable></td>
+								<td><input class="facever" disabled="disabled"></td>
+							</tr>
+							<tr>
+								<td><lable>掌纹版本</lable></td>
+								<td><input class="pvver" disabled="disabled"></td>
+								<td><lable>最大数据</lable></td>
+								<td><input class="maxlen" disabled="disabled"></td>
+							</tr>
+							<tr>
+								<td><lable>最大用户量</lable></td>
+								<td><input class="userlimit" disabled="disabled"></td>
+								<td><lable>最大指纹</lable></td>
+								<td><input class="fplimit" disabled="disabled"></td>
+							</tr>
+							<tr>
+								<td><lable>最大人脸</lable></td>
+								<td><input class="facelimit" disabled="disabled"></td>
+								<td><lable>最大密码</lable></td>
+								<td><input class="pwdlimit" disabled="disabled"></td>
+							</tr>
+							<tr>
+								<td><lable>最大卡数</lable></td>
+								<td><input class="cardlimit" disabled="disabled"></td>
+								<td><lable>最大记录数</lable></td>
+								<td><input class="loglimit" disabled="disabled"></td>
+							</tr>
+							<tr>
+								<td><lable>当前用户数</lable></td>
+								<td><input class="usercount" disabled="disabled"></td>
+								<td><lable>当前管理员数</lable></td>
+								<td><input class="managercount" disabled="disabled"></td>
+							</tr>
+							<tr>
+								<td><lable>当前指纹数</lable></td>
+								<td><input class="fpcount" disabled="disabled"></td>
+								<td><lable>当前人脸数</lable></td>
+								<td><input class="facecount" disabled="disabled"></td>
+							</tr>
+							<tr>
+								<td><lable>当前密码数</lable></td>
+								<td><input class="pwdcount" disabled="disabled"></td>
+								<td><lable>当前卡数</lable></td>
+								<td><input class="cardcount" disabled="disabled"></td>
+							</tr>
+							<tr>
+								<td><lable>当前记录数</lable></td>
+								<td><input class="logcount" disabled="disabled"></td>
+								<td><lable>所有记录数</lable></td>
+								<td><input class="alllogcount" disabled="disabled"></td>
+							</tr>
+							<tr>
+								<td><lable>固件名</lable></td>
+								<td><input class="firmware" disabled="disabled"></td>
+							</tr>
+
+						</table>
+					</form>
+				</dl>
+				<dl class="right2-devres" style="display: none">
+						<li><input type="button" class="restart" value="重启设备"> </li>
+						<li><lable>系统升级</lable>
+							<form id="uploadform" method="post" enctype="multipart/form-data">
+								<input type="file" name="file" multiple="multiple" class="uploadfile">
+							</form>
+						</li>
+					<li class="progress">
+						<div></div>
+					</li>
+						<li><input class="resbut" style="width: 40px" type="button" value="升级"></li>
+				</dl>
+				<dl class="right2-devpro" style="display: none">
+					<form>
+						<li>
+							<lable>设备名称</lable>
+							<input class="dnamed">
+						</li>
+						<li>
+							<lable>心跳间隔</lable>
+							<input class="interval">
+							<p class="tips" >(以秒为单位,请输入1~60)</p>
+						</li>
+						<li>
+							<lable>设备语言</lable>
+							<select class="language">
+								<option value="CHS">中文(简体)</option>
+								<option value="CHT">中文(繁体)</option>
+								<option value="en">English</option>
+								<option value="KR">韩语</option>
+								<option value="th">泰国语</option>
+								<option value="ja">日语</option>
+								<option value="tr">土耳其语</option>
+								<option value="es">西班牙语</option>
+								<option value="es-AR">西班牙-阿根廷语</option>
+								<option value="pt">葡萄牙语</option>
+								<option value="pt-BR">西班牙-巴西语</option>
+								<option value="id">印度尼西亚语</option>
+								<option value="de">德语</option>
+								<option value="fa">波斯语</option>
+								<option value="ar">阿拉伯语</option>
+								<option value="vi">越南语</option>
+							</select>
+						</li>
+						<li>
+							<lable>活体检测</lable>
+							<select class="huoti">
+								<option value="1">是</option>
+								<option value="2">否</option>
+							</select>
+						</li>
+						<li>
+							<lable>韦根格式</lable>
+							<select class="wgen">
+								<option value="26">26</option>
+								<option value="34">34</option>
+							</select>
+						</li>
+
+						<li class="prosave"><input class="probut" style="width: 50px" type="button" value="保存"></li>
+					</form>
+				</dl>
+				<div class="jinggao">
+					<div class="jg-title">
+						<input class="intitl" value="">
+					</div>
+					<div class="jg-body">
+						<input class="queren" type="button" value="确定">
+						<input class="cancel" type="button" value="取消">
+					</div>
+
+				</div>
+
+			</div>
+
+</body>
+<script src="../js/systemmanager.js">
+</script>
+</html>

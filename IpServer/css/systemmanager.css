@@ -1,0 +1,397 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;text-decoration: none;font-family: "微软雅黑";list-style:none;}
+
+/*right*/
+
+/*right1*/
+.right1{
+	box-shadow: 1px 2px 0px #999 inset;
+	width:100%;
+}
+.right1-top{
+	height:40px;
+	width:100%;
+	overflow:hidden
+}
+.right1-top h3{
+	margin-top:11px;
+	margin-left:3px;
+	font-size:18px;
+	color:#333;
+	
+}
+
+.right1-fl{
+	height:30px;
+	line-height:30px;
+	border:1px solid #ccc;
+	padding-left:20px;
+	padding-top:10px;
+}
+ .right1-fl li{
+	padding:0 10px;
+	float:left;
+	height:30px;
+	text-align:center;
+	font-size:14px;
+	/* color:#333; */
+	border:1px solid #ccc;
+	border-radius:5px;
+	margin-right:20px;
+	cursor:pointer;
+	border-top:0;
+	border-bottom:0;
+	padding-right:30px;
+} 
+
+
+ .right1-fl li a{
+	padding:0 10px;
+
+}
+
+.right1-fl li a:nth-child(1){
+   background:#ff8a3c;
+
+}
+
+
+.right2{
+	box-shadow: 1px 2px 0px #999 inset;
+	width:100%;
+	height:100%;
+}
+
+.right2 .right2-time{
+	position:relative;
+	top:20px;
+	left:300px;
+	width:300px;
+}
+
+
+.right2-time form li input{
+	margin-left:20px;
+	background-color: #DFF4FE;
+	border: 0;
+	outline: none;
+	height: 30px;
+	text-align: center;
+	
+}
+
+.right2-time form li{
+	
+	margin-bottom: 20px;
+}
+
+.baocun{
+	
+	text-align: center;
+}
+
+.right2-devinfo{
+	width:600px;
+	position:  relative;
+	left:150px;
+	
+	
+}
+
+
+.right2-devinfo form table tr td input{
+	
+	text-align: center;
+	border: 0;
+	outline: none;
+	height: 30px;
+	width:200px;
+
+	
+}
+
+.infosave{
+	text-align: center;
+	
+}
+
+.infobut{
+	position: relative;
+	width:100px;
+	background-color: yellow;
+	
+}
+
+/*----devpro--*/
+.right2-devpro{
+    position:relative;
+    top:20px;
+    left:300px;
+    width:400px;
+}
+
+
+.right2-devpro form li lable{
+    display:inline-block;
+    width:100px;
+    margin-bottom: 20px;
+
+}
+.tips {
+    float: right;
+    font-size: 10px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.right2-devpro form li input{
+    display:inline-block;
+    width:100px;
+    text-align: center;
+
+}
+
+
+.right2-devpro form li{
+
+    margin-bottom: 20px;
+}
+
+.prosave{
+    text-align: center;
+}
+
+
+/*  ----*/
+.romup{
+
+	text-align: center;
+}
+
+.right2 .right2-shibie{
+    position:relative;
+    top:20px;
+    left:300px;
+    width:400px;
+}
+
+
+.right2-shibie form li lable{
+    display:inline-block;
+   width:100px;
+
+}
+
+.right2-shibie form li input{
+    display:inline-block;
+    width:100px;
+    text-align: center;
+}
+
+.right2-shibie form li{
+
+    margin-bottom: 20px;
+}
+
+.shibiebut{
+    text-align: center;
+}
+
+.shibiebut input{
+    text-align: center;
+    width:50px;
+
+}
+/*-----------------------------*/
+
+.right2-sound{
+    position:relative;
+    top:20px;
+    left:300px;
+    width:400px;
+}
+
+
+.right2-sound form li lable{
+    display:inline-block;
+    width:100px;
+
+}
+
+.right2-sound form li input{
+    display:inline-block;
+    width:100px;
+    text-align: center;
+
+
+}
+
+.right2-sound form li{
+
+    margin-bottom: 20px;
+}
+
+.soundbut{
+    text-align: center;
+}
+
+.soundbut input{
+    text-align: center;
+    width:50px;
+
+}
+
+/*====================================*/
+.right2-webpro{
+    position:relative;
+    top:20px;
+    left:300px;
+    width:300px;
+}
+
+
+.right2-webpro form li lable{
+    display:inline-block;
+    width:100px;
+    margin-bottom: 20px;
+
+}
+
+.right2-webpro form li input{
+    display:inline-block;
+    width:120px;
+    text-align: center;
+
+}
+
+.right2-webpro form li{
+
+    margin-bottom: 20px;
+}
+
+.webprobut{
+    text-align: center;
+}
+
+/*-------------------------------*/
+
+.right2-datamag{
+    position:relative;
+    top:20px;
+    left:300px;
+    width:300px;
+}
+
+.right2-datamag li{
+    margin-bottom: 20px;
+}
+
+
+.right2-datamag li img{
+    float:left;
+    width:20px;
+    padding-left: 20px;
+}
+
+.right2-datamag li input{
+
+    width:150px;
+
+}
+
+/*---------------------------*/
+.right2-devres{
+    position:relative;
+    top:20px;
+    left:300px;
+    width:500px;
+}
+
+
+.right2-devres li{
+    margin-bottom: 20px;
+}
+
+.right2-devres form li lable{
+    display:inline-block;
+    width:70px;
+    margin-bottom: 20px;
+
+}
+
+.right2-devres li input{
+
+    width:200px;
+
+}
+.resbut{
+   margin-left: 70px;
+    width:50px;
+    display:inline-block;
+
+}
+
+.jinggao{
+    display: none;
+    position: absolute;
+    width:600px;
+    height:150px;
+    left:200px;
+}
+
+.jg-title{
+    width:600px;
+    height:40px;
+    background-color:#4489ED;
+    text-align: center;
+}
+
+.intitl{
+    display:inline-block;
+    height:40px;
+    border: 0;
+    outline: none;
+    background-color: #4489ED;
+    text-align: center;
+}
+
+.jg-body{
+    background-color: #9CA2AD;
+    width:600px;
+    height:110px;
+
+}
+
+.queren{
+    float:left;
+    position: absolute;
+    left:200px;
+    top:100px;
+    width:50px;
+}
+
+.cancel{
+    float:left;
+    position: absolute;
+    left:350px;
+    top:100px;
+    width:50px;
+}
+
+/*进度条*/
+  .progress {
+      width: 600px;
+      height: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin: 10px 0px;
+      overflow: hidden;
+  }
+/* 初始状态设置进度条宽度为0px */
+.progress > div {
+    width: 0px;
+    height: 100%;
+    background-color: yellowgreen;
+    transition: all .3s ease;
+}

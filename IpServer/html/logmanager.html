@@ -1,0 +1,89 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="../js-util/jquery.js"></script>
+<script src="../js-util/jquery-form.js"></script>
+<script src="../js-util/jquery-table2excel.js"></script>
+<script src="../js-util/xlsx.full.min.js"></script>
+<script type="text/javascript" src="../My97DatePicker/calendar.js"></script>
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+<link href="../css/logmanager.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+			<div class="right4-top">
+				<form id="rform" action="" method="post">
+				<p class="titlep">记录查看</p><!--/*这里跟随搜索框变化；初始是*/-->
+				<h4>
+					<span>
+						<p class="insert">起始日期</p>
+						<input class="begintime"
+							   onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})"
+							   value= "">
+					</span>
+					<span>
+						<p class="daoru">结束日期</p>
+						<input class="endtime"
+							   onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})"
+							   value="">
+					</span>
+
+					<span>
+						<p class="selectlog">查询</p>
+						<p class="daochu">考勤下载</p>
+					</span>
+				</h4>
+				</form>
+			</div>
+		<div class="right4-center">
+            <div>
+                <form>
+                    <table>
+                        <tr >
+                            <td><lable>打卡照片</lable></td>
+                            <td>ID</td>
+                            <td>时间</td>
+                            <td>打卡方式</td>
+                            <td>打卡模式</td>
+                            <td>进出模式</td>
+                            <td>开门模式</td>
+                        </tr>
+
+                    </table>
+                </form>
+            </div>
+            <div class="logdiv">
+                <table class="logs"></table>
+            </div>
+            <div class="right4-bottom">
+                <input id="firstye" style="display:none" type="button" value="首页"/>
+                <input id="beforeye" style="display:none" type="button" value="上一页"/>
+                <!-- 若只有一页则不显示下页，尾页，翻页 -->
+                <input id="nextye" style="display: none" type="button" value="下一页" >
+                <input id="lastye" style="display:none" type="button" value="尾页" >
+                <select id="fanye" style="display:none">
+
+                </select>
+                <label id="ye2"></label>
+                <select id="pagesize">
+                    <option value="100">每页100条</option>
+                    <option value="50">每页50条</option>
+                    <option value="20">每页20条</option>
+                    <option value="10">每页10条</option>
+                    <option value="5">每页5条</option>
+                </select>
+            </div>
+
+        </div>
+            <div class="progress2">
+                <img id="progressImgage"  alt="" src="../images/ajax_loading.gif"/>
+         </div>
+</body>
+
+
+<script src="../js/logmanager.js">
+
+
+</script>
+</html>

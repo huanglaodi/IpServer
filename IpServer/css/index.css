@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;text-decoration: none;font-family: "微软雅黑";list-style:none;}
+body{
+	background:#0F1736
+}
+.nav{
+	width:auto;
+	height:100%;
+	overflow:hidden;
+}
+.nav1200{
+	height:58px;
+	width:auto;
+	background :url("../images/back.jpg");
+	text-align: center;
+
+}
+.nav1200 >img{
+	position:absolute ;
+	float:left;
+    height:45px;
+	padding-top: 6px;
+	left:5px;
+}
+.nav1200 h1{
+	float:left;
+	width:200px;
+	font-size: 20px;
+	font-style: italic;
+	position: absolute;
+	left:30px;
+	text-align: center;
+	line-height: 80px;
+	color: #FFFFFF;
+}
+
+.exit{
+	float:right;
+	width:60px;
+	height:60px;
+	padding-right: 30px;
+
+}
+.exit img{
+	width:60px;
+	height:60px;
+	background:transparent;
+	margin-bottom:0px;
+}
+.nav1200 a span{
+	float:left;
+	width:50px;
+	height:20px;
+}
+/*.system*/
+.system{
+	width:100%;
+	height:100%;
+	margin:auto;
+}
+/*system-left*/
+
+.system-left{
+	width:220px;
+	height:100%;
+	overflow:hidden;
+	float:left;
+	position: relative;
+	background:-webkit-linear-gradient(#F5F9F8,#676C71);
+
+}
+
+.system-left a{
+	
+	text-align:center;
+	line-height:40px;
+	height:40px;
+	vertical-align:middle;
+}
+.system-left a li{
+	height:40px;
+	width:220px;
+	background:#D0D8D7;
+	border-bottom:1px solid #9CF5E3;
+	color:#666;
+	font-size:16px;
+
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	line-height:40px;
+}
+
+.system-left a:nth-child(1) li{
+	background:#65ABF1;
+	color:#fff;
+}
+
+.mystem-right{
+	background:#fff;
+	overflow:hidden;
+	width:auto;
+	height:100%;
+	position: relative;
+	top:-1px;
+	z-index:2;
+
+}
+
+.progress{
+	position: absolute;
+	z-index:1;
+	width:100%;
+	height:100%;
+	top: 0px;
+	filter: alpha(opacity=60);
+	left: 0px;
+	opacity:0.5;
+	-moz-opacity:0.5;
+    display:none;
+}
+
+
+
+/*ifram*/
+#fram{
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	frameborder:"no" ;
+	border:0;
+}
+
+html,body{
+	margin:0;
+	padding:0;
+	height:100%
+}
+
+
+#fram html,body{
+	margin:0;
+	padding:0;
+	height:100%
+}

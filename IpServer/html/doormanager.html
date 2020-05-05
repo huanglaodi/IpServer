@@ -1,0 +1,130 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="../js-util/jquery.js"></script>
+<script src="../js-util/jquery-form.js"></script>
+<script type="text/javascript" src="../My97DatePicker/calendar.js"></script>
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+<link href="../css/doormanager.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+			<div class="right1">
+				<div class="right1-top">
+					<h3>门禁管理</h3>
+				</div>
+				<ul class="right1-fl">
+					<li>
+						<a class="doorstate">门禁状态</a>
+						<a class="doorpro">门禁参数</a>
+						<!--<a class="restar">门禁时间组</a>-->
+					</li>
+				</ul>
+
+			</div>
+			<div class="right2">
+				<dl class="right2-dooropen">
+					<form>
+						<li>
+							<lable>门控开关</lable>
+							<select class="dstate">
+								<option value="open">延时开关</option>
+								<option value="close">常开</option>
+								<option value="open_close">常关</option>
+							</select>
+						</li>
+
+						<li class="doorstain"><input type="button" value="保存"></li>
+					</form>
+				</dl>
+				<dl class="right2-doorpro" style="display:none">
+					<form>
+						<li>
+							<lable>开门延时</lable>
+							<input class="doordelay">
+							<p class="tips">(以秒为单位,请输入1~60)</p>
+						</li>
+						<li>
+							<lable>报警延时</lable>
+							<input class="alarmdelay">
+							<p class="tips">(以秒为单位,请输入1~60)</p>
+						</li>
+						<li>
+							<lable>是否防潜回</lable>
+							<select class="antipass">
+								<option value="yes">是</option>
+								<option value="no">否</option>
+							</select>
+						</li>
+						<li>
+							<lable>是否防拆报警</lable>
+							<select class="tamperalarm">
+								<option value="yes">是</option>
+								<option value="no">否</option>
+							</select>
+						</li>
+						<li>
+							<lable>韦根格式</lable>
+							<select class="weigen">
+								<option value="26">26</option>
+								<option value="34">34</option>
+							</select>
+						</li>
+						<li class="doorsave"><input class="doorbt" style="width: 50px" type="button" value="保存"></li>
+					</form>
+				</dl>
+				<dl class="right2-doortimes" style="display: none">
+					<form>
+						<li>
+							<lable>时间组Id</lable>
+							<select class="timezones">
+							</select>
+						</li>
+						<li><lable>T1</lable> <input class="devtime"
+													  onfocus="WdatePicker({dateFmt:'HH:mm',readOnly:true})"
+													  value="08:30">-<input class="devtime"
+																			   onfocus="WdatePicker({dateFmt:'HH:mm',readOnly:true})"
+																			   value="08:30">
+						</li>
+						<li><lable>T2</lable> <input class="devtime"
+													  onfocus="WdatePicker({dateFmt:'HH:mm',readOnly:true})"
+													  value="08:30">-<input class="devtime"
+																			   onfocus="WdatePicker({dateFmt:'HH:mm',readOnly:true})"
+																			   value="08:30">
+						</li>
+						<li><lable>T3</lable> <input class="devtime"
+													  onfocus="WdatePicker({dateFmt:'HH:mm',readOnly:true})"
+													  value="08:30">-<input class="devtime"
+																			   onfocus="WdatePicker({dateFmt:'HH:mm',readOnly:true})"
+																			   value="08:30">
+						</li>
+						<li><lable>T4</lable> <input class="devtime"
+													  onfocus="WdatePicker({dateFmt:'HH:mm',readOnly:true})"
+													  value="08:30">-<input class="devtime"
+																			   onfocus="WdatePicker({dateFmt:'HH:mm',readOnly:true})"
+																			   value="08:30">
+						</li>
+						<li><lable>T5</lable> <input class="devtime"
+													  onfocus="WdatePicker({dateFmt:'HH:mm',readOnly:true})"
+													  value="08:30">-<input class="devtime"
+																			   onfocus="WdatePicker({dateFmt:'HH:mm',readOnly:true})"
+																			   value="08:30">
+						</li>
+						<li><lable>T6</lable> <input class="devtime"
+													  onfocus="WdatePicker({dateFmt:'HH:mm',readOnly:true})"
+													  value="08:30">-<input class="devtime"
+																			   onfocus="WdatePicker({dateFmt:'HH:mm',readOnly:true})"
+																			   value="08:30">
+						</li>
+						<li class="romup"><input type="button" value="保存"></li>
+					</form>
+				</dl>
+			</div>
+
+</body>
+
+<script src="../js/doormanager.js">
+
+</script>
+</html>

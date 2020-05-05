@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="../js-util/jquery.js"></script>
+    <script src="../js-util/jquery-form.js"></script>
+    <script src="../js-util/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="../My97DatePicker/calendar.js"></script>
+    <script type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../js-util/jquery-table2excel.js"></script>
+    <link href="../css/usermanager.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<div class="right4-top">
+    <form id="rform" action="" method="post">
+        <p class="titlep">人员库</p><!--/*这里跟随搜索框变化；初始是*/-->
+        <h3>
+            <input class="utext" type="text" oninput="value=value.replace(/[^\d]/g,'')" placeholder="人员ID/空则查询所有"/>
+            <input id="search" type="button" value="搜索"/>
+        </h3>
+        <h4>
+					<span>
+						<p class="insert">新增</p>
+					</span>
+            <span>
+						<p class="daoru">导入</p>
+					</span>
+            <span>
+						<p class="daochu">导出</p>
+					</span>
+            <span>
+						<p class="delete">删除</p>
+						<p class="deleteall">删除整页</p>
+					</span>
+        </h4>
+    </form>
+</div>
+
+
+<div class="right4-center">
+    <div>
+        <form class="uform">
+            <table>
+                <tr class="userinfo">
+                    <td><input class="allchecked" type="checkbox">
+                        <lable>全选</lable>
+                    </td>
+                    <td>ID</td>
+                    <td>姓名</td>
+                    <td>权限</td>
+                    <td>卡号</td>
+                    <td>密码</td>
+                    <td>指纹数</td>
+                    <td>人脸数</td>
+                    <td>掌纹数</td>
+                    <td>有效期开始日期</td>
+                    <td>有效期结束日期</td>
+                    <td>编辑</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="userdv">
+
+        <table class="users"></table>
+
+    </div>
+
+    <div class="right4-bottom">
+        <input id="firstye" style="display:none" type="button" value="首页"/>
+        <input id="beforeye" style="display:none" type="button" value="上一页"/>
+        <!-- 若只有一页则不显示下页，尾页，翻页 -->
+        <input id="nextye" style="display: none" type="button" value="下一页">
+        <input id="lastye" style="display:none" type="button" value="尾页">
+        <select id="fanye" style="display:none">
+
+        </select>
+        <label id="ye2"></label>
+        <select id="pagesize">
+            <option value="100">每页100条</option>
+            <option value="50">每页50条</option>
+            <option value="20">每页20条</option>
+            <option value="10">每页10条</option>
+
+        </select>
+    </div>
+</div>
+
+
+<div class="right4-insertuser">
+    <p class="userdiv">添加人员</p>
+    <div class="leftinfo">
+        <li>
+            <lable>姓名</lable>
+            <input class="uname">
+        </li>
+        <li class="uid" style="display:none">
+            <lable style="color:red">* ID</lable>
+            <input class="userid">
+        </li>
+        <li>
+            <lable>权限</lable>
+            <select class="quanxian">
+                <option value="0">用户</option>
+                <option value="1">管理员</option>
+            </select>
+        </li>
+        <li>
+            <lable>密码</lable>
+            <input class="pwd">
+        </li>
+        <li>
+            <lable>卡号</lable>
+            <input class="card">
+        </li>
+        <li>
+            <lable>有效期</lable>
+            <input class="starttime"
+                   onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})"
+            >-
+            <input class="endtime"
+                   onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})"
+            >
+        </li>
+        <li>
+            <lable>照片注册</lable>
+            <select class="usephoto">
+                <option value=0>否</option>
+                <option value=1>是</option>
+            </select>
+        </li>
+        <li class="enroll">
+            <lable>远程录入</lable>
+            <select class="feature">
+                <option value="face">人脸</option>
+                <option value="fp">指纹</option>
+                <option value="card">卡</option>
+                <option value="pwd">密码</option>
+            </select>
+            <img class="enluru" src="../images/luru.jpg" >
+        </li>
+    </div>
+    <div class="right-photo">
+        <img class="photoshow" src="" >
+        <div class="message">请选择300k以下的jpg,png,jpeg图片</div>
+        <input type="file" class="photofile" onchange="imgchanges(this)" style="display:none">
+        <li class="photo">选择照片</li>
+    </div>
+
+    <div class="userbotm">
+        <input class="ok" readonly="true" value="确定">
+        <input class="no" readonly="true" value="取消">
+    </div>
+</div>
+
+<div class="xlsdiv" style="display:none">
+
+    <div class="xlsdiv-b1" style="width: 100%;height:45px">
+        <span class="left-t" style="font-size: 18px;">人员导入步骤</span>
+        <span role="button" class="right-t" style="cursor:pointer">返回</span>
+    </div>
+    <ul class="xlsdiv-b2">
+        <li class="uinn">
+            <span>第1步，先下载</span>
+                <a type="button" class="uinn-1" href="../Templete/user.xlsx"><img src="../images/down.jpg" style="height:20px;width:20px;margin-bottom: -4px">Excel文档模版</a>
+            </span>
+        </li>
+        <li class="uinn">第2步，下载后，填写需要导入的列数据，<span class="t-blu">请严格按照顺序填写所有列</span> <span style="color:red">(导入员工数量一次不得超过200条)</span></li>
+        <li class="uinn" style="padding-left: 20px;">
+            <table class="table-user">
+                <tr class="thead">
+                    <td class="nowrap"><span style="color:red">ID</span></td>
+                    <td class="nowrap t-red">姓名</td>
+                    <td class="nowrap t-red">权限</td>
+                    <td class="nowrap t-red">卡号</td>
+                    <td class="nowrap t-red">密码</td>
+                    <td class="nowrap">有效期开始</td>
+                    <td class="nowrap">有效期结束</td>
+                </tr>
+                <tr class="tshow">
+                    <td class="c-gra" colspan="99">示例</td>
+                </tr>
+                <tr>
+                    <td class="nowrap"><span style="color:red">必填项</span><br>1</td>
+                    <td>小赵</td>
+                    <td><span>用户</span><br>用户或管理员</td>
+                    <td>123456</td>
+                    <td>123456</td>
+                    <td>2020-01-01</td>
+                    <td>2020-02-01</td>
+                </tr>
+            </table>
+        </li>
+        <li class="uinn">第3步，选择文件，点击“导入”按钮进行导入。</li>
+    </ul>
+    <div class="xls-last">
+        <table class="xlsupload">
+            <tr>
+                <td style="text-align: center">请选择Excel文件</td>
+                <td class="fileup">
+                    <input type="file" class="choosexls" >
+                </td>
+                <td style="text-align: center">
+                    <input type="button" class="uploadxls" value="导入">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <ul class="uinn-l">
+        <li>第4步，选择图片，点击“导入”按钮进行导入。<span style="color:red">(非必须，若要导入照片请以员工工号或姓名命名)</span></li>
+    </ul>
+    <div class="div-upimgs">
+        <table class="upimgs-t">
+            <tr>
+                <td style="text-align: center">批量图片上传</td>
+                <td class="imgup">
+                    <input type="file" multiple="" class="chooseimgs" onchange="filesupload(this)">
+                </td>
+                <td style="text-align: center">
+                    <input type="button" class="uploadimgs" style="width:60px" value="导入">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<div class="jinggao">
+    <div class="jg-title">
+        <input class="intitl" value="上传人员设备已有是否覆盖">
+    </div>
+    <div class="jg-body">
+        <input class="queren" type="button" value="确定">
+        <input class="cancel" type="button" value="取消">
+    </div>
+</div>
+
+<div class="progress2">
+    <img id="progressImgage"  alt="" src="../images/ajax_loading.gif"/>
+</div>
+
+
+</body>
+
+<script type="text/javascript">
+    $(".allchecked").click(function () {
+        var isChecked = $(this).is(":checked");
+        if (isChecked) {
+            $(".usercheck").prop('checked', true);
+        } else {
+            $(".usercheck").prop("checked", false);
+        }
+    })
+
+
+    $(".time").click(function () {
+        $(".right2-time").show();
+        $(".right2-time").siblings().hide();
+    })
+
+    $(".restar").click(function () {
+        $(".right2-res").show();
+        $(".right2-res").siblings().hide();
+    })
+
+    $(".devinfo").click(function () {
+        $(".right2-devinfo").show();
+        $(".right2-devinfo").siblings().hide();
+    })
+
+    $(".devpro").click(function () {
+        $(".right2-devpro").show();
+        $(".right2-devpro").siblings().hide();
+    })
+
+    $(".romupdate").click(function () {
+        $(".right2-romupdate").show();
+        $(".right2-romupdate").siblings().hide();
+    })
+
+
+</script>
+
+<script src="../js/usermanager.js">
+
+</script>
+</html>
